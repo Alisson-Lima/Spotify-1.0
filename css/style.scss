@@ -1,0 +1,340 @@
+$cor1: #0F0F0F;
+$cor1-transparent: #0f0f0f5b;
+$cor2: #616161;
+$cor3: #1ED760;
+$cor3-transparent: #1ed75f3d;
+$cor4: #ffffff;
+$cor5: #1f1f1f;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $cor1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    margin-top: 15px;
+}
+h3{
+    color: $cor2;
+    font-weight: 100;
+    font-size: 16px;
+    // margin-top: -14px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 850px;
+    max-width: 411px;
+    overflow: hidden;
+    .first-page{
+        display: block;
+        position: relative;
+        overflow-y: scroll;
+        height: 100%;
+        .bg-header{
+            display: block;
+            position: relative;
+            width: 100%;
+            min-height: 330px;
+            height: 45vh;
+            max-height: 400px;
+            margin-top: 0;
+            left: 0;
+            background-image: url(../img/Caroline.png);
+            background-position: center -100px;
+            background-size: cover;
+
+            .header{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                justify-content: right;
+                align-items: center;
+                padding: 20px;
+                z-index: 3;
+                .item-menu{
+                    margin-left: 25px;
+                }
+
+                .favorite{
+                    cursor: pointer;
+                    .favoriteAnimate{
+                       fill: $cor3;
+                       stroke: $cor3;
+                       
+                   } 
+                }
+
+                .btn-menu{
+                    width: 20px;
+                    height: 40px;
+                    background-color: transparent;
+                    border: transparent;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    z-index: 1;
+                    span{
+                        background-color: $cor4;
+                        border-radius: 100%;
+                        margin-bottom: 3px;
+                        display: block;
+                        position: relative;
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+
+                .menu{
+                    background-color: $cor5;
+                    position: absolute;
+                    width: 200px;
+                    height: auto;
+                    top: -200px;
+                    right: 0;
+                    padding: 20px;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        height: 50px;
+                        text-decoration: none;
+                    }
+                }
+                .menu-active{
+                    top: 0;
+                }
+            }
+        }
+        .bg-header::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient($cor1-transparent, $cor1);
+        }
+        .album-infos{
+            position: relative;
+            min-height: 200px;
+            padding: 0 0 20px;
+            text-align: center;
+            display: flex;            
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .photo-album{
+                display: block;
+                position: absolute;
+                top: -220px;
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 30px 30px $cor1;
+            }
+            .btn-play{
+                width: 240px;
+                height: 45px;
+                border-radius: 50px;
+                background-color: $cor3;
+                border: transparent;
+                font-size: 16px;
+                text-transform: capitalize;
+                font-weight: 600;
+                box-shadow: 0 0 30px $cor3-transparent;
+                cursor: pointer;
+            }
+        }
+        .list-musics{
+            padding: 30px 30px 5px;
+
+            .favorite{
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 30px;
+                .favoriteAnimate{
+                    fill: $cor3;
+                    stroke: $cor3;
+                    cursor: pointer;
+                }
+            } 
+            .music{
+                position: relative;
+                height: 80px;
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 5px 0;
+                cursor: pointer;
+                h3{
+                    position: relative;
+                    display: inline-block;
+                    font-weight: 600;
+                    top: -50px;
+                }
+                img{
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 10px;
+                    margin-right: 20px;
+                    box-shadow: 0 15px 10px $cor1-transparent;
+                }
+            }
+        }
+    }
+    .second-page{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        padding-bottom: 15px;
+        width: 100%;
+        height: 100%;
+        background-color: $cor1;
+        z-index: 4;
+        overflow-y: scroll;
+        .btn-voltar{
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 3;
+            background-color: transparent;
+            border: transparent;
+            outline: transparent;
+            cursor: pointer;
+        }
+        .photo-bg{
+            display: block;
+            position: relative;
+            margin-top: 0;
+            left: 0;
+            img{
+                width: 100%;
+                min-height: 330px;
+                height: 45vh;
+                max-height: 400px;
+            }
+        }
+        .photo-bg::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient($cor1-transparent, $cor1);
+        }
+        .info-music{
+            position: relative;
+            min-height: 200px;
+            padding: 0 0 20px;
+            text-align: center;
+            display: flex;            
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            img{
+                display: block;
+                position: absolute;
+                top: -220px;
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 30px 30px $cor1;
+            }
+
+            .controls{
+                width: 180px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button{
+                    background: transparent;
+                    border: transparent;
+                    outline: transparent;
+                    height: 52px;
+                }
+            }
+
+            .slider{
+                position: relative;
+                width: 220px;
+                height: 3px;
+                border-radius: 5px;
+                background-color: $cor2;
+                margin: 20px 0;
+                .greenslider{
+                    position: relative;
+                    width: 0;
+                    height: 100%;
+                    background-color: $cor3;
+                }
+                .greenslider::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 100%;
+                    background-color: $cor3;
+                    right: -3.5px;
+                    top: -2.5px;
+                }
+            }
+        }
+        .lyrics{
+            position: relative;
+            width: calc(100% - 60px);
+            margin: 20px auto;
+            padding: 20px;
+            background-color: $cor3;
+            border-radius: 10px;
+            box-shadow: 0 0 20px $cor3-transparent;
+            p{
+                position: relative;
+                font-size: 26px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            p:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 780px) and (min-width: 411px) {
+    .container{
+        position: relative;
+        top: calc(50vh - 425px);
+    }
+}

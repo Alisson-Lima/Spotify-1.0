@@ -1,0 +1,11 @@
+slider.style.width = 100 + "%"
+            setTimeout(()=>{
+                percentage = 0
+            },1000)
+            if(music >= ThePerfectGuy.length){
+                music = 0
+                nextMusic(music)
+            }else{
+                music++
+                nextMusic(music) 
+            }

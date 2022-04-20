@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@-webkit-keyframes opacity-simple {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-simple {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes photo-album-animation {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: -220px;
+  }
+}
+
+@keyframes photo-album-animation {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: -220px;
+  }
+}
+
+@-webkit-keyframes bottom-to-top-simple {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes bottom-to-top-simple {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-filter: drop-shadow(0 0 50px transparent);
+            filter: drop-shadow(0 0 50px transparent);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 50px #1ed75f);
+            filter: drop-shadow(0 0 50px #1ed75f);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 50px transparent);
+            filter: drop-shadow(0 0 50px transparent);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-filter: drop-shadow(0 0 50px transparent);
+            filter: drop-shadow(0 0 50px transparent);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 50px #1ed75f);
+            filter: drop-shadow(0 0 50px #1ed75f);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 50px transparent);
+            filter: drop-shadow(0 0 50px transparent);
+  }
+}
+
+.animate {
+  /* animação da foto capa do album */
+}
+
+.animate .bg-header {
+  -webkit-animation: opacity-simple 1.5s normal;
+          animation: opacity-simple 1.5s normal;
+}
+
+.animate .album-infos .photo-album {
+  -webkit-animation: photo-album-animation 1s normal;
+          animation: photo-album-animation 1s normal;
+}
+
+.animate .album-infos h1 {
+  position: relative;
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .album-infos h3 {
+  position: relative;
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .album-infos .btn-play {
+  position: relative;
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .list-musics .music:nth-child(1) {
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .list-musics .music:nth-child(2) {
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .list-musics .music:nth-child(3) {
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .list-musics .music:nth-child(4) {
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animate .list-musics .music:nth-child(5) {
+  -webkit-animation: bottom-to-top-simple 1s normal;
+          animation: bottom-to-top-simple 1s normal;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loading {
+  position: absolute;
+  top: calc(50vh - 50px);
+  -webkit-animation: loading 2s normal;
+          animation: loading 2s normal;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-filter: drop-shadow(0 0 50px #1ed75f);
+          filter: drop-shadow(0 0 50px #1ed75f);
+}
+/*# sourceMappingURL=animations.css.map */
